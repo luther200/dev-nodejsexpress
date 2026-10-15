@@ -4,7 +4,7 @@ personnal dev express website with GET POST DELETE methods.
 
 ## Installation: 
 
-```diff
+```bash
 > git clone https://github.com/luther200/dev-nodejsexpress
 > cd dev-nodejsexpress
 > 
