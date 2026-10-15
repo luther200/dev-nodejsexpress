@@ -11,8 +11,6 @@ const PORT = ports[currentEnv];
 
 let data = ["john"]; 
 
-//midle war
-
 app.use(express.json());
 
 console.log(`RUNNING IN ${currentEnv.toUpperCase()} MODE`);
