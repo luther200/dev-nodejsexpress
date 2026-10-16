@@ -17,7 +17,7 @@ personnal dev express website with GET POST DELETE methods.
     
 
 > npm run dev  
-    RUNNING IN DEV MODE (nodemon)
+    RUNNING IN DEV MODE
     Server started on : http://localhost:8000
 ```
 
