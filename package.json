@@ -15,7 +15,7 @@
   "type": "module",
   "main": "src/server.js",
   "scripts": {
-    "dev": "clear; NODE_ENV=dev node --watch --experimental-strip-types --experimental-sqlite --env-file=.env ./src/server.js",
+    "dev": "clear; NODE_ENV=dev node --watch --experimental-strip-types --experimental-sqlite ./src/server.js",
     "real": "clear; NODE_ENV=real node .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

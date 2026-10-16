@@ -42,10 +42,27 @@ router.post('/login', (req, res) => {
 
     const {username, password} = req.body;
 
-    // encrypt passwd: 
-    const hashedPassword = bcrypt.hashSync(password, 8);
+    try {
 
-    res.sendStatus(201);
+        const getUser = db.prepare(`SELECT * FROM users WHERE username= ? `);
+//        getUser.run(username);
+        const user = getUser.get(username);
+        
+        // if no user associated:
+        if (!user) { return res.status(404).send({ message: "User not fount" }) }
+        console.log(user);
+        // compare passwd:
+        const passwordIsValid = bcrypt.compareSync(password, user.password);
+        if (!passwordIsValid) { return res.status(401).send({ message: "Invalid password"}) };
+
+        const token = jwt.sign({id: user.id}, process.env.JWT_SECRET, {expiresIn: "24h"});
+        res.json({ token });
+
+    } catch (err) {
+        console.log(err.message);
+        res.sendStatus(503);
+    }
+
 });
 
 export default router;
