@@ -1,0 +1,27 @@
+import { DatabaseSync } from "node:sqlite";
+
+const db = new DatabaseSync(':memory:');
+
+// SQL Exec : 
+db.exec(`
+
+    CREATE TABLE users (
+        uid INTEGER PRIMARY KEY AUTOINCREMENT,
+        username VARCHAR(25) UNIQUE,
+        password VARCHAR(25)
+
+    )
+`);
+
+db.exec(`
+    
+    CREATE TABLE todos (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        user_id INTEGER NOT NULL,
+        task TEXT,
+        completed BOOLEAN DEFAULT 0,
+        FOREIGN KEY(user_id) REFERENCES users(uid)
+    )
+`);
+
+export default db;

@@ -1,0 +1,21 @@
+
+###
+GET http://localhost:8383/
+
+### Register POST /auth/register
+POST http://localhost:8383/auth/register
+Content-Type: application/json
+
+{
+    "username": "test@gmail.com",
+    "password": "testtest"
+}
+
+### Login POST /auth/login
+POST http://localhost:8383/auth/login
+Content-Type: application/json
+
+{
+    "username": "test@gmail.com",
+    "password": "testtest"
+}
