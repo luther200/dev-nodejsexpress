@@ -1,7 +1,7 @@
 import jwt from "jsonwebtoken";
 import 'dotenv/config';
 
-// req = token ; res = verify ; nest = 
+// req = token ; res = verify ; next = 
 function authMiddleware(req, res, next) {
     const token = req.headers['authorization'];
 
