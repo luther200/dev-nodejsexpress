@@ -1,3 +1,5 @@
+/* UNSUPORT (v4.0.0) -> update Prisma.
+
 import { DatabaseSync } from "node:sqlite";
 
 const db = new DatabaseSync('./data/database.db');
@@ -25,3 +27,5 @@ db.exec(`
 `);
 
 export default db;
+
+*/

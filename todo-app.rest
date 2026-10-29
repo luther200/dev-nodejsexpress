@@ -41,6 +41,3 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzkyNDEy
 ###
 DELETE http://localhost:8383/todos
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzkyNDEyMzE3LCJleHAiOjE3OTI0OTg3MTd9.qt7z4bEHq6-jsJxvU2t66dgni8v9baOpkr2F8QA1GZg
-
-
-

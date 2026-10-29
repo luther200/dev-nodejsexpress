@@ -1,6 +1,6 @@
 {
   "name": "dev-nodejsexpress",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "A full stack ",
   "homepage": "https://github.com/luther200/dev-nodejsexpress#readme",
   "bugs": {
@@ -20,10 +20,14 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "bcryptjs": "^3.0.3",
-    "dotenv": "^18.0.8",
     "express": "^5.3.0",
+    "dotenv": "^18.0.8",
     "jsonwebtoken": "^9.0.3",
-    "pg": "^8.23.1"
+    "bcryptjs": "^3.0.3",
+    "@prisma/adapter-pg": "^7.10.1",
+    "@prisma/client": "^7.10.1"
+  },
+  "devDependencies": {
+    "prisma": "^7.10.1"
   }
 }
